@@ -20,7 +20,7 @@ export const getLeaguesData = async () => {
   }
 }
 
-export const getTeams = async () => {
+export const getTeamsData = async () => {
   const api = await fetch(UrlTeams, {
     headers: {
       "x-auth-token": process.env.REACT_APP_API_KEY
