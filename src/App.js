@@ -1,11 +1,10 @@
 import './App.css';
-
-console.log(process.env.REACT_APP_WEATHER_API_KEY)
+import Navbar from '../src/Components/Navbar.js'
 
 function App() {
   return (
     <div className="App">
-      Hello
+      <Navbar />
     </div>
   );
 }
