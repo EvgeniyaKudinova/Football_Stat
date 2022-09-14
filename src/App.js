@@ -1,8 +1,9 @@
 import './App.css';
 import { useEffect, useState } from "react"
 
+
 import Navbar from '../src/Components/Navbar.js'
-import { getLeaguesData, getTeamsData } from './API/Fetch';
+import { getLeaguesData, getTeamsData } from "./API/Fetch.js"
 
 
 function App() {
@@ -17,11 +18,10 @@ function App() {
     /*fetch - метод, позволяющий полностью прочитать url адрес и получить данные*/
     const apiLeagues = await getLeaguesData();
 
-    if (!getLeaguesData) {
-        console.log("Возникла ошибка при получении данных о лигах...");
+    if (!apiLeagues) return 
+        console.log("Данные о лигах в формате json", apiLeagues);
         setleagues(apiLeagues.competitions)
-      }
-
+      
     }
     dataLeagues()
   }, [])
@@ -30,11 +30,9 @@ function App() {
     const dataTeams = async () =>{
     const apiTeams = await getTeamsData();
 
-    if (!getTeamsData) {
-        console.log("Возникла ошибка при получении данных о командах...");
-        setteams(apiTeams.competitions)
-      }
-
+    if (!apiTeams) return
+        console.log("Данные о командах в формате json", apiTeams);
+        setteams(apiTeams.teams)
     }
     dataTeams()
   }, [])

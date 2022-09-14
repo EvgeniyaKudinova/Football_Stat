@@ -12,6 +12,7 @@ export const getLeaguesData = async () => {
   if (api.ok) {
     /*переводим данные в json формат*/
     const json = await api.json()
+    //console.log(json)
     return json
   }
   else {
