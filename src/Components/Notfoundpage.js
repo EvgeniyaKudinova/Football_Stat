@@ -8,4 +8,4 @@ function Notfoundpage() {
     )
   }
   
-  export default Notfoundpage
+  export default Notfoundpage;

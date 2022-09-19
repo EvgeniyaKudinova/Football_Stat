@@ -16,4 +16,4 @@ function Routing({ leagues, teams }) {
     )
   }
   
-  export default Routing
+  export default Routing;
