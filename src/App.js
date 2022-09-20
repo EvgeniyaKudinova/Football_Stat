@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Navbar from '../src/Components/Navbar.js'
 import { getLeaguesData, getTeamsData } from "./API/Fetch.js"
 import TeamsList from './Components/TeamsList';
+import SearchLine from './Components/Search.js'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <SearchLine />
       <TeamsList teamsList = {teamsList} />
     </div>
   );

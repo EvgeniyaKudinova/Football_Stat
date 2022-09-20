@@ -16,7 +16,7 @@ function TeamItem({idTeam, nameTeam, flagTeam}){
             <Card> {/*карточки объектов с содержимым*/}
                 <CardActionArea component={Link} to={teamLink}>
                     <CardContent>
-                        
+
                         <Typography sx={{ fontWeight: "bold" }}>
                             {nameTeam}
                         </Typography>
@@ -25,7 +25,7 @@ function TeamItem({idTeam, nameTeam, flagTeam}){
                         <Container
                             component="img"
                             src={flagTeam}
-                            sx={{ height: 200, width: 230, pb: "20px" }}
+                            sx={{ height: 180, width: 200, pb: "20px" }}
                         /> 
                 </CardActionArea>
             </Card>
