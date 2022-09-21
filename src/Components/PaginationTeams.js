@@ -19,13 +19,13 @@ function PaginationTeams({ teamsList }) { //приходит параметр и
       setQuery(newQuery)
     }
 
-    const dataFiltered = 1
+    //const teamsList = 1
     const contentPerPage = 18
     const lastIndex = pageCount * contentPerPage
     const firstIndex = lastIndex - contentPerPage
 
-    const pageTeamsCount = Math.ceil(dataFiltered.length / contentPerPage)
-    const paginatedArray = dataFiltered.slice(firstIndex, lastIndex)
+    const pageTeamsCount = Math.ceil(teamsList.length / contentPerPage)
+    const paginatedArray = teamsList.slice(firstIndex, lastIndex)
 
     return (
       <>
