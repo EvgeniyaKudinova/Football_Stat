@@ -43,9 +43,9 @@ function Routing() {
   
     return (
       <Routes>
-        {/*Есть роут на опред.адрес*/}
-        <Route path="/Football_Stat" element={<PaginationLeaques leaguesList={leaguesList}/>} />
-        <Route path="/teams" element={<PaginationTeams teamsList={teamsList}/>} />
+        {/*Есть роут на опред.адрес
+        <Route path="/Football_Stat" element={<PaginationLeaques leaguesList={leaguesList}/>} />*/}
+        <Route path="/Football_Stat" element={<PaginationTeams teamsList={teamsList}/>} />
         {/*если ничего не найдено*/}
         <Route path="*" element={<Notfoundpage />} />
       </Routes>

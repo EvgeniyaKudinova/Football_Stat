@@ -1,13 +1,15 @@
 import TeamsList from "./TeamsList.js"
 import SearchLine from "./Search.js"
 import { useState } from "react";
+import { Stack } from "@mui/system";
+import { Pagination, Typography } from "@mui/material";
 
 
-function PaginationTeams({ leaguesList }) { //приходит параметр из роутинга
+function PaginationTeams({ teamsList }) { //приходит параметр из роутинга
   
     // We start with an empty list of items.
     const [query, setQuery] = useState("");
-    const [pageCount, setPageCount] = useState(0);
+    const [pageCount, setPageCount] = useState(1);
 
     const handlePageClick = (event, value) =>{
       setPageCount(value)
@@ -27,7 +29,7 @@ function PaginationTeams({ leaguesList }) { //приходит параметр 
 
     return (
       <>
-            <SearchField query={query} update={update} />
+            <SearchLine query={query} update={update} />
       <Stack
         spacing={2}
         alignItems="center"
@@ -40,7 +42,7 @@ function PaginationTeams({ leaguesList }) { //приходит параметр 
           </Typography>
         ) : (
           <>
-            <TeamsList paginatedTeamsList={paginatedTeamsList} />
+            <TeamsList paginatedTeamsList={paginatedArray} />
             <Pagination
               size="large"
               count={pageTeamsCount}
