@@ -14,7 +14,7 @@ function Navbar() {
 
     return (
       <div>
-        <Button>Hello World</Button>
+        {/*<Button>Hello World</Button>*/}
         {/*AppBar создает синюю полоску - заголовок. Текст в середине*/}
         <AppBar position="static">
           {/*Tabs пришвартовывает влево*/}

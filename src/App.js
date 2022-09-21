@@ -6,18 +6,20 @@ import Navbar from '../src/Components/Navbar.js'
 import { getLeaguesData, getTeamsData } from "./API/Fetch.js"
 import TeamsList from './Components/TeamsList';
 import SearchLine from './Components/Search.js'
+import Routing from './Components/Routing.js'
+import { Box } from '@mui/material';
 
 
 function App() {
 
-  const [leaguesList, setLeaguesList] = useState([])
+  /*const [leaguesList, setLeaguesList] = useState([])
   const [teamsList, setTeamsList] = useState([])
 
   //получаем элементы
   useEffect(() =>{
-    /*Асинхронный(одновременный) запрос на получение данных*/
+    /*Асинхронный(одновременный) запрос на получение данных
     const dataLeagues = async () =>{
-    /*fetch - метод, позволяющий полностью прочитать url адрес и получить данные*/
+    /*fetch - метод, позволяющий полностью прочитать url адрес и получить данные
     const apiLeagues = await getLeaguesData();
 
     if (!apiLeagues) return 
@@ -37,13 +39,16 @@ function App() {
         setTeamsList(apiTeams.teams)
     }
     dataTeams()
-  }, [])
+  }, [])*/
 
   return (
     <div className="App">
       <Navbar />
       <SearchLine />
-      <TeamsList teamsList = {teamsList} />
+      <Box>
+        <Routing />
+      </Box>
+
     </div>
   );
 }
