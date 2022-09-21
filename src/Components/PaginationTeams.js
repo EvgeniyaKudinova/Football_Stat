@@ -20,7 +20,7 @@ function PaginationTeams({ teamsList }) { //приходит параметр и
     }
 
     //const teamsList = 1
-    const contentPerPage = 18
+    const contentPerPage = 10
     const lastIndex = pageCount * contentPerPage
     const firstIndex = lastIndex - contentPerPage
 

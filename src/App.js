@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <SearchLine />
+      {/*<SearchLine />*/}
       <Box>
         <Routing />
       </Box>
