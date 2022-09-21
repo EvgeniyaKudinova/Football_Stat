@@ -24,6 +24,7 @@ function TeamItem({idTeam, nameTeam, flagTeam}){
                     </CardContent>
                         <Container
                             component="img"
+                            alt="Флаг команды"
                             src={flagTeam}
                             sx={{ height: 180, width: 200, pb: "20px" }}
                         /> 

@@ -1,10 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 
-import Leagues from '../Pages/Leagues.js'
-import Teams from '../Pages/Teams.js'
-
-import PaginationLeaques from './PaginationLeaques.js'
-import PaginationTeams from './PaginationTeams.js'
+import PaginationLeaques from '../Pages/PaginationLeaques.js'
+import PaginationTeams from '../Pages/PaginationTeams.js'
 import Notfoundpage from '../Pages/Notfoundpage.js'
 
 import { getLeaguesData, getTeamsData } from "../API/Fetch.js"
@@ -43,9 +40,9 @@ function Routing() {
   
     return (
       <Routes>
-        {/*Есть роут на опред.адрес
-        <Route path="/Football_Stat" element={<PaginationLeaques leaguesList={leaguesList}/>} />*/}
-        <Route path="/Football_Stat" element={<PaginationTeams teamsList={teamsList}/>} />
+        {/*Есть роут на опред.адрес*/}
+        <Route path="/Football_Stat" element={<PaginationLeaques leaguesList={leaguesList}/>} />
+        <Route path="/teams" element={<PaginationTeams teamsList={teamsList}/>} />
         {/*если ничего не найдено*/}
         <Route path="*" element={<Notfoundpage />} />
       </Routes>

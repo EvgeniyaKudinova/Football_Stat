@@ -6,7 +6,7 @@ function TeamsList({paginatedTeamsList}){
 
     return(
         <Grid container spacing={3} justifyContent="center">
-          {/*берем массив dailyWeather, принимает элемент day
+          {/*берем массив paginatedTeamsList, принимает элемент team
           проходимся по массиву и преобразуем этот массив в jsx элемент*/}
           {paginatedTeamsList.map((team) => (
             <TeamItem
