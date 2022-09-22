@@ -1,12 +1,15 @@
-import { TextField } from "@mui/material";
+import {  TextField } from "@mui/material";
 import { Stack } from "@mui/system";
-import SearchIcon from "@mui/icons-material/Search";
 
-function SearchLine(){
+function SearchLine({query, update}){
     return(
         <Stack spasing={4} margin={3}>
             <Stack direction='row' spasing={2} >
-                <TextField label='Поиск' variant='outlined' size='small'/>
+                <TextField label='Поиск' variant='outlined' size='small'
+                value={query}
+                onChange={(e)=>update(e.target.value)}
+
+                />
                 {/*<SearchIcon style={{ fill: "blue" }} />*/}
             </Stack>
         </Stack>

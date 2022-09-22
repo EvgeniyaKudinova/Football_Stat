@@ -3,6 +3,7 @@ import SearchLine from "../Components/Search.js"
 import { useState } from "react";
 import { Stack } from "@mui/system";
 import { Pagination, Typography } from "@mui/material";
+import filteredCountries from "../Components/Filtered.js";
 
 
 function PaginationTeams({ teamsList }) { //приходит параметр из роутинга
@@ -19,15 +20,15 @@ function PaginationTeams({ teamsList }) { //приходит параметр и
       setQuery(newQuery)
     }
 
-    //const teamsList = 1
+    const filtered = filteredCountries(query, teamsList)
     const contentPerPage = 10
     const lastIndex = pageCount * contentPerPage
     const firstIndex = lastIndex - contentPerPage
 
-    const pageTeamsCount = Math.ceil(teamsList.length / contentPerPage)
+    const pageTeamsCount = Math.ceil(filtered.length / contentPerPage)
     //slice() копирует заданную часть массива и возвращает эту скопированную часть в виде нового массива
-    const paginatedArray = teamsList.slice(firstIndex, lastIndex) 
-    console.log(".....................", pageTeamsCount)
+    const paginatedArray = filtered.slice(firstIndex, lastIndex) 
+    //console.log(".....................", pageTeamsCount)
 
     return (
       <>

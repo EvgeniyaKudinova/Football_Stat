@@ -17,16 +17,10 @@ function Navbar() {
         {/*<Button>Hello World</Button>*/}
         {/*AppBar создает синюю полоску - заголовок. Текст в середине*/}
         <AppBar position="static">
-          {/*Tabs пришвартовывает влево*/}
-          <Tabs
-          value={value} 
-          onChange={handleChange}
-          textColor="inherit"
 
-           // Задаем цвет подчеркиванию активной вкладке
-            TabIndicatorProps={{sx:{backgroundColor: "white"}}}
-            
-          >
+          <Tabs value={value} onChange={handleChange} textColor="inherit"
+            // Задаем цвет подчеркиванию активной вкладке
+            TabIndicatorProps={{sx:{backgroundColor: "white"}}} >
 
             <Tab label="Лиги"  component={Link} to="/Football_Stat" />
             <Tab label="Команды" component={Link} to="/teams"/>
