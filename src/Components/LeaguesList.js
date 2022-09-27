@@ -1,20 +1,20 @@
 import { Grid } from '@mui/material'
-import LeaqueItem from '../Components/LeaqueItem.js'
+import LeagueItem from './LeagueItem.js'
 
-function LeaqueList({paginatedLeaquesList}){
+function LeagueList({paginatedLeaguesList}){
   //console.log("данные в TeamsList", teamsList)
 
     return(
         <Grid container spacing={2} justifyContent="center">
           {/*берем массив paginatedTeamsList, принимает элемент team
           проходимся по массиву и преобразуем этот массив в jsx элемент*/}
-          {paginatedLeaquesList.map((leaque) => (
-            <LeaqueItem
-                key={leaque.id} //особенность реакта
-                idLeaque={leaque.id}
-                name={leaque.area.name}
-                nameLeaque={leaque.name}
-                flagLeaque={leaque.area.ensignUrl}
+          {paginatedLeaguesList.map((league) => (
+            <LeagueItem
+                key={league.id} //особенность реакта
+                idLeague={league.id}
+                name={league.area.name}
+                nameLeague={league.name}
+                flagLeague={league.area.ensignUrl}
             />
           ))}
         </Grid>
@@ -22,4 +22,4 @@ function LeaqueList({paginatedLeaquesList}){
 
 }
 
-export default LeaqueList;
+export default LeagueList;

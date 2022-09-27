@@ -35,3 +35,36 @@ export const getTeamsData = async () => {
     return null
   }
 }
+
+export const getTeamsMatches = async (teamId, queryDateFrom, queryDateTo) => {
+  const api = await fetch(
+    `https://api.football-data.org/v2/teams/${teamId}/matches?dateFrom=${queryDateFrom}&dateTo=${queryDateTo}`, {
+    headers: {
+      "x-auth-token": process.env.REACT_APP_API_KEY
+    }
+  })
+  if (api.ok) {
+    const json = await api.json()
+    return json
+  } else {
+    console.error("Возникла проблема с получением данных о командах")
+    return null
+  }
+}
+
+
+export const getLeaquesMatches = async (leaqueId, queryDateFrom, queryDateTo) => {
+  const api = await fetch(
+    `https://api.football-data.org/v2/competitions/${leaqueId}/matches?dateFrom=${queryDateFrom}&dateTo=${queryDateTo}`, {
+    headers: {
+      "x-auth-token": process.env.REACT_APP_API_KEY
+    }
+  })
+  if (api.ok) {
+    const json = await api.json()
+    return json
+  } else {
+    console.error("Возникла проблема с получением данных о лигах")
+    return null
+  }
+}

@@ -1,11 +1,11 @@
 import { Pagination, Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { useState } from 'react';
-import LeaquesList from '../Components/LeaquesList.js'
+import LeaguesList from '../Components/LeaguesList.js'
 import SearchLine from '../Components/Search.js';
 import filteredCountries from '../Components/Filtered.js'
 
-function PaginationLeaques({ leaguesList }) { //приходит параметр из роутинга
+function PaginationLeagues({ leaguesList }) { //приходит параметр из роутинга
 
         // We start with an empty list of items.
         const [query, setQuery] = useState("");
@@ -40,7 +40,7 @@ function PaginationLeaques({ leaguesList }) { //приходит парамет�
               </Typography>
             ) : (
               <>
-                <LeaquesList paginatedLeaquesList={paginatedArray} />
+                <LeaguesList paginatedLeaguesList={paginatedArray} />
                 <Pagination
                   size="large"
                   shape="rounded" //форма элементов страницы
@@ -55,4 +55,4 @@ function PaginationLeaques({ leaguesList }) { //приходит парамет�
     )
 }
   
-export default PaginationLeaques
+export default PaginationLeagues

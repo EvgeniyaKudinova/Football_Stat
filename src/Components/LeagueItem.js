@@ -3,27 +3,27 @@ import NoImage from '../Image/NoImage.jpg'
 import { Link } from "react-router-dom"
 
 
-function LeaqueItem({idLeaque, nameLeaque, name, flagLeaque}){
+function LeagueItem({idLeague, nameLeague, name, flagLeague}){
 
-    const leaqueLink = `/leaque/${idLeaque}/matches`
+    const leagueLink = `/leaque/${idLeague}/matches`
 
-    if(!flagLeaque){
-        flagLeaque=NoImage
+    if(!flagLeague){
+        flagLeague=NoImage
     }
 
     return(
         <Grid item xs={2} margin={3} my={5}> {/*сетка макетов item - дочерний элемент grid в teamsList | xs-ширина одного эл-та | my - отступ сверху */}
             <Card> {/*карточки объектов с содержимым*/}
-                <CardActionArea component={Link} to={leaqueLink}>
+                <CardActionArea component={Link} to={leagueLink}>
                     <CardMedia //картинка во всю ширину
                         component="img"
                         alt="Картинка лиги"
-                        src={flagLeaque}
+                        src={flagLeague}
                         sx={{ height: 170, pb: "10px" }}
                     />
 
 <                   Typography sx={{ fontWeight: "bold" }} variant="h6">
-                        {nameLeaque}
+                        {nameLeague}
                     </Typography>
                         
                     <Typography variant="overline" color="gray">
@@ -37,4 +37,4 @@ function LeaqueItem({idLeaque, nameLeaque, name, flagLeaque}){
 
 }
 
-export default LeaqueItem;
+export default LeagueItem;
