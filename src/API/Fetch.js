@@ -53,9 +53,9 @@ export const getTeamsMatches = async (teamId, queryDateFrom, queryDateTo) => { /
 }
 
 
-export const getLeaquesMatches = async (leaqueId, queryDateFrom, queryDateTo) => {
+export const getLeaguesMatches = async (leagueId, queryDateFrom, queryDateTo) => {
   const api = await fetch(
-    `https://api.football-data.org/v2/competitions/${leaqueId}/matches?dateFrom=${queryDateFrom}&dateTo=${queryDateTo}`, {
+    `https://api.football-data.org/v2/competitions/${leagueId}/matches?dateFrom=${queryDateFrom}&dateTo=${queryDateTo}`, {
     headers: {
       "x-auth-token": process.env.REACT_APP_API_KEY
     }

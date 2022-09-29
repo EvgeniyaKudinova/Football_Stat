@@ -1,7 +1,7 @@
 import {  TextField } from "@mui/material";
 import { Stack } from "@mui/system";
 
-function SearchLine({query, update}){ //из paginationTeams
+function SearchLine({query, update}){ //из paginationTeams и paginationLeagues
     return(
         <Stack spasing={4} margin={3}>
             <Stack direction='row' spasing={2} >

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 
-import PaginationLeaques from '../Pages/PaginationLeagues.js'
+import PaginationLeagues from '../Pages/PaginationLeagues.js'
 import PaginationTeams from '../Pages/PaginationTeams.js'
 import Notfoundpage from '../Pages/Notfoundpage.js'
 import LeaguesMatches from '../Pages/LeaguesMatches.js'
@@ -61,7 +61,7 @@ function Routing() {
     return (
       <Routes>
         {/*Есть роут на опред.адрес*/}
-        <Route path="/Football_Stat" element={<PaginationLeaques leaguesList={leaguesList}/>} />
+        <Route path="/Football_Stat" element={<PaginationLeagues leaguesList={leaguesList}/>} />
         <Route path="/teams" element={<PaginationTeams teamsList={teamsList}/>} />
         {leaguesMatches}
         {teamsMatches}

@@ -26,7 +26,7 @@ function PaginationLeagues({ leaguesList }) { //приходит парамет�
         const lastIndex = pageCount * contentPerPage
         const firstIndex = lastIndex - contentPerPage
     
-        const pageLeaqueCount = Math.ceil(filtered.length / contentPerPage)
+        const pageLeagueCount = Math.ceil(filtered.length / contentPerPage)
         //slice() копирует заданную часть массива и возвращает эту скопированную часть в виде нового массива
         const paginatedArray = filtered.slice(firstIndex, lastIndex) 
     
@@ -44,7 +44,7 @@ function PaginationLeagues({ leaguesList }) { //приходит парамет�
                 <Pagination
                   size="large"
                   shape="rounded" //форма элементов страницы
-                  count={pageLeaqueCount}
+                  count={pageLeagueCount}
                   page={pageCount}
                   onChange={handleChange} //вещаем обработчик собятия для поиска
                 />

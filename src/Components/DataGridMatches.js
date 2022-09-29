@@ -30,16 +30,16 @@ function DataGridMatches({matches, updateMatches}){ //из TeamsMatches
         CANCELED: "Отменён"
       }
 
-    const rows = matches.map((matchesTeam) => ({
-        id: matchesTeam.id,
-        date: new Date(matchesTeam.utcDate).toLocaleDateString(),
-        time: new Date(matchesTeam.utcDate).toLocaleTimeString([],{hour: "2-digit", minute: "2-digit"}),
-        status: statusMatches[matchesTeam.status],
-        homeTeam: matchesTeam.homeTeam.name,
-        guestTeam: matchesTeam.awayTeam.name,
-        scoreMain: `${checkScore(matchesTeam.score.fullTime.homeTeam)} : ${checkScore(matchesTeam.score.fullTime.awayTeam)}`,
-        scoreExtra: `${checkScore(matchesTeam.score.extraTime.homeTeam)} : ${checkScore(matchesTeam.score.extraTime.awayTeam)}`,
-        scorePenalty: `${checkScore(matchesTeam.score.penalties.homeTeam)} : ${checkScore(matchesTeam.score.penalties.awayTeam)}`
+    const rows = matches.map((match) => ({
+        id: match.id,
+        date: new Date(match.utcDate).toLocaleDateString(),
+        time: new Date(match.utcDate).toLocaleTimeString([],{hour: "2-digit", minute: "2-digit"}),
+        status: statusMatches[match.status],
+        homeTeam: match.homeTeam.name,
+        guestTeam: match.awayTeam.name,
+        scoreMain: `${checkScore(match.score.fullTime.homeTeam)} : ${checkScore(match.score.fullTime.awayTeam)}`,
+        scoreExtra: `${checkScore(match.score.extraTime.homeTeam)} : ${checkScore(match.score.extraTime.awayTeam)}`,
+        scorePenalty: `${checkScore(match.score.penalties.homeTeam)} : ${checkScore(match.score.penalties.awayTeam)}`
     }))
 
     const columns = [

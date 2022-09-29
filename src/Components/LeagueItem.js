@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 function LeagueItem({idLeague, nameLeague, name, flagLeague}){
 
-    const leagueLink = `/leaque/${idLeague}/matches`
+    const leagueLink = `/leagues/${idLeague}/matches` ///competitions/${idLeague}/matches
 
     if(!flagLeague){
         flagLeague=NoImage
