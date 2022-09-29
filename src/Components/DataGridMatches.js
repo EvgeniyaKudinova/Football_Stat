@@ -4,11 +4,11 @@ import { DataGrid } from "@mui/x-data-grid";
 
 function DataGridMatches({matches, updateMatches}){ //из TeamsMatches
 
-    if(!matches.length){
+    if(!matches.length)
         return (
             <Typography>К сожалению, на этот момент данных нет</Typography>
         )
-    }
+    
     /*оценка счета*/
     const checkScore = (value) => {
         if (value === null) {

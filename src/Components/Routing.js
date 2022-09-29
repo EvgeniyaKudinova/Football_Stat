@@ -49,7 +49,7 @@ function Routing() {
     />
   ))
 
-    const teamsMatches = teamsList.map((team) => (
+  const teamsMatches = teamsList.map((team) => (
     <Route
       path={`/teams/${team.id}/matches`}
       element={<TeamsMatches team={team} />}

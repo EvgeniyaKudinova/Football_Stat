@@ -4,6 +4,10 @@ import TeamItem from './TeamItem.js'
 function TeamsList({paginatedTeamsList}){
   //console.log("данные в TeamsList", teamsList)
 
+  if(!paginatedTeamsList.length){
+    return null
+  }
+
     return(
         <Grid container spacing={3} justifyContent="center">
           {/*берем массив paginatedTeamsList, принимает элемент team

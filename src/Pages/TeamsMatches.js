@@ -8,6 +8,7 @@ import DataGridMatches from '../Components/DataGridMatches.js'
 
 
 function TeamsMatches({team}){ //приняли из роутинга
+    //console.log(team)
 
     const[dateFrom, setDateFrom] = useState(null) //дата с
     const [dateTo, setDateTo] = useState(null) //дата до
@@ -64,7 +65,7 @@ function TeamsMatches({team}){ //приняли из роутинга
             </Breadcrumbs>
 
             <Typography variant='h3' align="left" margin={2}>Матчи</Typography>
-            
+
             <div align="left">
                 <DatePickerMatches
                     label="с"

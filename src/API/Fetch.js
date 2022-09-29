@@ -36,7 +36,7 @@ export const getTeamsData = async () => {
   }
 }
 
-export const getTeamsMatches = async (teamId, queryDateFrom, queryDateTo) => {
+export const getTeamsMatches = async (teamId, queryDateFrom, queryDateTo) => { //в GetTeamMatches
   const api = await fetch(
     `https://api.football-data.org/v2/teams/${teamId}/matches?dateFrom=${queryDateFrom}&dateTo=${queryDateTo}`, {
     headers: {
